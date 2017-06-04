@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>p5</title>
+        <style>
+            .myContainer {
+                width: 400px;
+                height: 400px;
+                border: 1px solid;
+            }
+        </style>
+        <script src="main.js"></script>
+    </head>
+    <body>
+        
+        <div id="test" class="myContainer"></div>
+        <div id="test2" class="myContainer"></div>
+    
+        
+        <script>
+            var myshooty = new ShootyController({
+                'parent': document.querySelector('.myContainer'),
+                'shooterColor': 'red',
+                'shooterSize': 10,
+                'bulletColor': 'pink',
+                'bulletSize': 2,
+                'bulletSpeed': 15
+            });
+
+            var myshooty2 = new ShootyController({
+                'parent': document.querySelector('#test2'),
+            });
+        </script>
+    </body>
+</html>
