@@ -22,7 +22,9 @@ function ShootyController(o) { var c, ctx, def = {
 
     if (!o.parent) {
         console.log('var myVar = ShootyController({');
+        
         console.log("(required)    'parent': Element");
+        
         console.log("(optional)    'shooterColor': Any Web Color");
         console.log("(optional)    'shooterSize': Pixels");
         console.log("(optional)    'bulletColor': Any Web Color");
@@ -55,7 +57,7 @@ function ShootyController(o) { var c, ctx, def = {
         mouse = {
         'X': undefined,
         'Y': undefined,
-        'D': undefined, //distance
+        'D': undefined, //Distance
         'A': undefined  //Angle
     },  canvas = document.createElement('canvas');
                               
@@ -94,7 +96,7 @@ function ShootyController(o) { var c, ctx, def = {
     canvas.onmouseout = function () { shooter.fire = false; }
     
     
-    function animate() {
+    var animate = function () {
         requestAnimationFrame(animate)
         
         if (ctx) {
